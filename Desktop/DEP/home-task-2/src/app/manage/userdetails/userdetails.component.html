@@ -1,0 +1,43 @@
+<div class="row margining">
+<div class="column" style='width: 50%;'>
+<div *ngFor ="let u of users; index as i">
+<div   class="row">
+    <div class="col-lg-6" style="width:75%">
+         <div class='card cardmargin bottom' [style.border-color]="!u.isDeleted ?'green':'red'" >
+            <div class="card-body">
+            <div class='card-title'> <a [routerLink]="['user',u.id]"style="text-decoration: none;"> {{u.firstName+" "+u.lastName}}</a></div>
+            <button (click)="userDetails(u.id)" class=" btn btn-primary " style="float:right;">Details</button>
+        </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="column" style="width:50%;">
+    <router-outlet></router-outlet>
+</div>
+
+</div>
+
+
+<!--
+<div class="column" style="width:50%;">
+    
+   <div  *ngIf="details">
+       <div class="card alignment" style="width:60%">
+            <div class="card-title" style="margin:20px 0px 20px 0  ;" >{{user.firstName+" "+user.lastName}}</div>
+            <div *ngIf="!user.isDeleted" style="color:green">Active</div>
+            <div *ngIf="user.isDeleted" style="color:red">Deleted</div>
+         <div class="card-body"> 
+               <div ><pre>login              {{user.firstName+" "+user.lastName}} </pre></div>
+               <div ><pre>Firstname          {{user.firstName}} </pre></div>
+               <div ><pre>lastname           {{user.lastName}} </pre></div>
+               <div ><pre>Age                {{user.age}} </pre></div>
+            </div>
+       </div>
+   </div> 
+
+</div>
+
+</div>
+-->

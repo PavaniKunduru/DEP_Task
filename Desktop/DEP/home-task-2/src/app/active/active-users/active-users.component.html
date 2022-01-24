@@ -1,0 +1,14 @@
+<div *ngFor ="let u of users; index as i" >
+    <div   class="row" style="margin-left:14px;" class="margining">  
+        <div class="col-lg-12">
+            <div *ngIf="!u.isDeleted" >
+            <div class='card cardmargin' [style.border-color]="'green'" >
+                <div class="card-body">
+                <div class='card-title'> {{u.firstName+" "}}{{u.lastName}}</div>
+                <button  (click)="deactivate(u.id)" class=" btn btn-danger " style="float:right;">Deactive</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
