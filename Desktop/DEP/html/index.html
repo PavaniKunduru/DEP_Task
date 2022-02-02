@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <!-- meta data -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+     <!-- google fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link
+       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+       rel="stylesheet"
+     />
+    <!-- page title -->
+    <title>News Blog</title>
+
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="d-flex col">
+    <header class="d-flex col center">
+      <div class="d-flex col center">
+        <span id="title">News Blog</span>
+        <span id="sub-title">worldwide news</span>
+      </div>
+    </header>
+
+    <main>
+      <section id="articles-header" class="d-flex row">
+        <div class="d-flex col" id="category">
+          <label for="categoryFilter">select category</label>
+          <select id="categoryFilter">
+            <option value="All" selected>All</option>
+            <option value="tech">Learn</option>
+            <option value="sports">FootBall</option>
+            <option value="compition">Food</option>
+            <option value="activity">Dance</option>
+          </select>
+        </div>
+        <div id="main-title">All News</div>
+        <div class="d-flex col" id="subscribe-form">
+          <label for="text-subscribe">Subscribe</label>
+          <form action="#!" class="d-flex row">
+            <input
+              type="email"
+              id="text-subscribe"
+              placeholder="Email Address"
+            />
+            <button type="submit" id="btn-subscribe">Subscribe</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="d-flex row" id="news-section">
+        <div class="d-flex col" id="news-container">
+          <div class="article-container d-flex row broder-bottom">
+            <img
+              src="https://th.bing.com/th/id/OIP.MaN7NVJ45DjnasAKoMfuWQAAAA?pid=ImgDet&w=180&h=194&rs=1"
+              class="article-image"
+            />
+            <div class="article-body">
+              <p class="article-title">Title One</p>
+              <small
+                >Posted on <b>06 Jan, 2022 </b>// Category:
+                <b>Category One</b></small
+              >
+              <p class="article-desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos a
+                tempora numquam qui mollitia facilis incidunt necessitatibus
+                eius, aliquam quam aliquid sequi nesciunt error ad sunt esse!
+                Laboriosam, dolore debitis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos a
+                tempora numquam qui mollitia facilis incidunt necessitatibus
+                eius, aliquam quam aliquid sequi nesciunt error ad sunt esse!
+                Laboriosam, dolore debitis.
+              </p>
+              <button>Continue Reading</button>
+            </div>
+          </div>
+
+          <div class="article-container d-flex row broder-bottom">
+            <img
+              src="https://th.bing.com/th/id/OIP.nXR_OeDHVa2PmySZVssB7gAAAA?pid=ImgDet&w=245&h=254&rs=1"
+               class="article-image"
+            />
+            <div class="article-body">
+              <p class="article-title">Title Two</p>
+              <small
+                >Posted on <b>04 Jan, 2022 </b>// Category:
+                <b>Category Two</b></small
+              >
+              <p class="article-desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos a
+                tempora numquam qui mollitia facilis incidunt necessitatibus
+                eius, aliquam quam aliquid sequi nesciunt error ad sunt esse!
+                Laboriosam, dolore debitis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos a
+                tempora numquam qui mollitia facilis incidunt necessitatibus
+                eius, aliquam quam aliquid sequi nesciunt error ad sunt esse!
+                Laboriosam, dolore debitis.
+              </p>
+              <button>Continue Reading</button>
+            </div>
+          </div>
+
+          <div class="article-container d-flex row">
+            <img
+              src="https://th.bing.com/th/id/OIP.Xhu5Oi586QIBoQWor-HOEAHaHW?w=223&h=220&c=7&r=0&o=5&pid=1.7"
+              class="article-image"
+            />
+            <div class="article-body">
+              <p class="article-title">Title Three</p>
+              <small
+                >Posted on <b>03 Jan, 2022 </b>// Category:
+                <b>Category One</b></small
+              >
+              <p class="article-desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos a
+                tempora numquam qui mollitia facilis incidunt necessitatibus
+                eius, aliquam quam aliquid sequi nesciunt error ad sunt esse!
+                Laboriosam, dolore debitis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos a
+                tempora numquam qui mollitia facilis incidunt necessitatibus
+                eius, aliquam quam aliquid sequi nesciunt error ad sunt esse!
+                Laboriosam, dolore debitis.
+              </p>
+              <button>Continue Reading</button>
+            </div>
+          </div>
+        </div>
+        <aside class="d-flex row">
+          <img
+            src="https://th.bing.com/th/id/OIP.8fRAlt9ttA6ZQJuFlIPDDwHaGN?pid=ImgDet&w=575&h=482&rs=1"
+            alt="breaking-news"
+          />
+        </aside>
+      </section>
+    </main>
+
+    <footer class="d-flex col center">@NewsFeed 2022</footer>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<div class="card" style="width:60%">
+    <div class="card-title" style="padding-left:15px;padding-top: 15px;">  {{user.firstName}}{{user.lastName}} </div>
+    <div *ngIf="!user.isDeleted" class="paddingtext" style="color:green">Active</div>
+    <div *ngIf="user.isDeleted" class="paddingtext" style="color:red">Deleted</div>
+    <div class="card-body"> 
+        <div ><pre>loginId            {{user.firstName+" "}}{{user.lastName}} </pre></div>
+        <div ><pre>Firstname          {{user.firstName}} </pre></div>
+        <div ><pre>lastname           {{user.lastName}} </pre></div>
+        <div ><pre>Age                {{user.age}} </pre></div>
+     </div>
+</div>
+
+          
