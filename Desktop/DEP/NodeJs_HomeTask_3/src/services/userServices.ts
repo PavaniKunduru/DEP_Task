@@ -12,7 +12,6 @@ export const getAllUsers = async (req: Request, res: Response) => {
 };
 
 export const createUser = async (req: Request, res: Response) => {
-  try {
     const { firstName, lastName, age, login, password } = req.body;
     await User.create({
       id: uuidv4(),
@@ -23,13 +22,9 @@ export const createUser = async (req: Request, res: Response) => {
       password,
     });
     res.status(201).json({ message: "User Created!" });
-  } catch (err: any) {
-    res.status(500).json({ err: err.message });
-  }
 };
 
 export const getUserById = async (req: Request, res: Response) => {
-  try {
     const { id } = req.params;
     const user = await User.findOne({ where: { id } });
     if (user) {
@@ -37,22 +32,15 @@ export const getUserById = async (req: Request, res: Response) => {
     } else {
       res.status(404).json({ message: "User not found!" });
     }
-  } catch (err: any) {
-    res.status(500).json({ err: err.message });
-  }
 };
 
 export const updateUser = async (req: Request, res: Response) => {
-  try {
     const { firstName, lastName, age, login, password } = req.body;
     await User.update(
       { firstName, lastName, age, login },
       { where: { id: req.params.id } }
     );
     res.status(200).json({ message: "User Updated!" });
-  } catch (err: any) {
-    res.status(500).json({ err: err.message });
-  }
 };
 
 export const deleteUser = async (req: Request, res: Response) => {
