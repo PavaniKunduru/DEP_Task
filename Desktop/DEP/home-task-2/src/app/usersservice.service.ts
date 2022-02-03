@@ -28,13 +28,13 @@ export class UsersserviceService {
     ];
   }
     update(id:string){
-       this.users.forEach(i=>{
+       this.users.map(i=>{
          if(id==i.id)
              return i.isDeleted=true;
        })
       }
       activating(id:string){
-        this.users.forEach(i=>{
+        this.users.map(i=>{
           if(id==i.id)
               return i.isDeleted=false;
         })

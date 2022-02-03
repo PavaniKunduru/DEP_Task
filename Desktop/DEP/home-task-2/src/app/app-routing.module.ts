@@ -10,7 +10,7 @@ const routes: Routes = [
   {path:'deleted',component:DeletedUsersComponent},
   {path:'home',component:HomeComponent},
   {path:'',redirectTo:'home',pathMatch:'full'},
-  {path:'manage',loadChildren:()=>import('./manage/manage.module').then(m=>m.ManageModule)}
+  {path:'manage',loadChildren:()=>import('./manage/manage.module').then(childern=>childern.ManageModule)}
 ];
 
 @NgModule({

@@ -1,3 +1,6 @@
 .margining{
     margin-top:8px;
 }
+.card cardmargin mx-auto{
+    border-color:red;
+}

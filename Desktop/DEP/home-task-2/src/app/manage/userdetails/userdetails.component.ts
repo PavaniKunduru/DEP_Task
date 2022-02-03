@@ -11,7 +11,7 @@ import { UsersserviceService } from 'src/app/usersservice.service';
 export class UserdetailsComponent implements OnInit {
 
   constructor(private service:UsersserviceService, private route:Router) {
-   this. m();
+   this. getUser();
    }
 
   ngOnInit(): void {
@@ -28,7 +28,7 @@ export class UserdetailsComponent implements OnInit {
    };
    details:boolean=false;
    idNumber:string='';
-   m(): void{
+   getUser(): void{
     this.users= this.service.users;
     console.log(this.users)
    }

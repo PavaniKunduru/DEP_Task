@@ -9,12 +9,12 @@ import { UsersserviceService } from 'src/app/usersservice.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  idnum:string="";
+  num:string="";
   users:User[] =[];
   constructor(private service:UsersserviceService,private router:ActivatedRoute) {
   this.router.params.subscribe(data=>{
-  this.idnum=data['id'];
-  this.m();
+  this.num=data['id'];
+  this.getUser();
     });
   }
   
@@ -31,14 +31,12 @@ export class UserComponent implements OnInit {
   idNumber:string='';
   ngOnInit(): void {
   }
-  m(): void{
+  getUser(): void{
     this.users= this.service.users;
     console.log(this.users);
-    this.users.forEach((i)=>{ 
-      if (this.idnum==i.id)
+    this.users.filter((i)=>{ 
+      if (this.num==i.id)
          return this.user=i;
-
-
    })
   }
 }
