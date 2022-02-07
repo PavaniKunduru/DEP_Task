@@ -1,6 +1,6 @@
 //import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { clearCart, placeOrder } from "../redux/ducks/cart";
+import { clearCart, placeOrder, removeItemFromCart } from "../redux/ducks/cart";
 
 const CartItems = (props: { cartItems: any[]; dispatch: any }) => {
   const navigate = useNavigate();
@@ -30,8 +30,16 @@ const CartItems = (props: { cartItems: any[]; dispatch: any }) => {
         return (
           <p className="cart-items-row" key={item.id}>
             <Link to={`/book/${item.id}`}>{item.title}</Link>
-            <span>${item.price.toFixed(2)}</span>
-          </p>
+            <span>
+              ${item.price.toFixed(2)}
+              <span
+                className="btn-delete"
+                title="Remove item from cart"
+                onClick={() => dispatch(removeItemFromCart(item.id))}>
+                X
+              </span>
+            </span>
+           </p>
         );
       })}
       <hr />
