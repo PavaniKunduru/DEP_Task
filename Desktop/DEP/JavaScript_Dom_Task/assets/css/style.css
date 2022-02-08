@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+#search-container > img {
+  height: 40px;
+  flex: 0.1;
+}
+
+form {
+  flex: 0.9;
+}
+
+input {
+  height: 34px;
+  width: 500px;
+}
+
+#search-video {
+  height: 34px;
+  padding: 0 20px;
+}
+
+#main-container {
+  margin-top: 48px;
+  background-color: #f9f9f9;
+  flex-grow: 1;
+  border-top: 2px solid #f1f1f1;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.video-box {
+  width: 280px;
+  padding: 10px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  margin: 12px;
+  height: 324px;
+}
+
+.video-box > img {
+  width: 260px;
+  height: 140px;
+}
+
+.video-title {
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.video-content,
+.video-author,
+.video-date {
+  font-size: 0.8rem;
+  text-align: left;
+  margin-top: 8px;
+}
+
+.video-content {
+  color: #909090;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 46px;
+}
+.video-author,
+.video-date {
+  color: #606060;
+}
+
+#pagination {
+  flex-wrap: wrap;
+}
+#pagination button {
+  padding: 4px 8px;
+  background-color: bisque;
+  border: 2px solid burlywood;
+  cursor: pointer;
+  margin: 0 2px 24px 2px;
+  text-transform: capitalize;
+}
+
+.btn-active {
+  background-color: burlywood !important;
+}
+
+button:disabled {
+  cursor: not-allowed !important;
+}
+
+@media screen and (max-width: 768px) {
+  #search-container {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 2px;
+  }
+
+  form {
+    flex: 1;
+    margin-top: 20px;
+  }
+}
